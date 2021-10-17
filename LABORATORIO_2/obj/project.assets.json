@@ -5803,11 +5803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\LABORATORIO_2\\LABORATORIO_2.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\Documents\\GitHub\\Laboratorio-2-progra-ll\\LABORATORIO_2\\LABORATORIO_2.csproj",
       "projectName": "LABORATORIO_2",
-      "projectPath": "C:\\Users\\USUARIO\\source\\repos\\LABORATORIO_2\\LABORATORIO_2.csproj",
+      "projectPath": "C:\\Users\\USUARIO\\Documents\\GitHub\\Laboratorio-2-progra-ll\\LABORATORIO_2\\LABORATORIO_2.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\source\\repos\\LABORATORIO_2\\obj\\",
+      "outputPath": "C:\\Users\\USUARIO\\Documents\\GitHub\\Laboratorio-2-progra-ll\\LABORATORIO_2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",

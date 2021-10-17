@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M09352XY9zBHR2gaMgv7IiZ2OvK+GuynZjqBruTUgYUPJS3dukpvk+Q5qXEppkyYFLaKSq7I1WSRkp8zTBJgUA==",
+  "dgSpecHash": "D23ZihuCmXECE99Ere4u3TaaQk84ZpfGRKW4cffS5srh/Nhgta6ezdhCHSlILexu99cedUdNRKJpd+F40efoOg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\source\\repos\\LABORATORIO_2\\LABORATORIO_2.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\Documents\\GitHub\\Laboratorio-2-progra-ll\\LABORATORIO_2\\LABORATORIO_2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

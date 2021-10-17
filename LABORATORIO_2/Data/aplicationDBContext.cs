@@ -1,5 +1,4 @@
 ﻿using LABORATORIO_2.Dominio;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace LABORATORIO_2.Data
 {
-    public class AplicationDBContext : DbContext
+    public class AplicationDbContext : DbContext
     {
-        public AplicationDBContext(DbContextOptions<AplicationDBContext> options)
-        : base(options)
-
+        public AplicationDbContext(DbContextOptions<AplicationDbContext>options)
+            : base(options)
         {
 
         }
@@ -22,5 +20,6 @@ namespace LABORATORIO_2.Data
         {
             base.OnModelCreating(modelBuilder);
         }
+      
     }
 }
