@@ -15,8 +15,8 @@ namespace LABORATORIO_2.Dominio
 
         public int IdPersona { get; set; }
 
-        public string NombePersona { get; set; }
-
+        public string NombrePersona { get; set; }
+     
         public int EdadPersona { get; set; }
 
         public string DescripcionPersona { get; set; }

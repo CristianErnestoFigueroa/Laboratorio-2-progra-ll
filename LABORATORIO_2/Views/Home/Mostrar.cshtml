@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Mostrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Mostrar</h1>
+
+<table id="mitabla" class="">
+    <thead>
+        <tr>
+            <th>
+                Id Persona
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Edad
+            </th>
+            <th>
+                Descripcion
+            </th>
+        </tr>
+    </thead>
+</table>
+@section scripts{
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    
+    <script>
+    $(document).ready(function() {
+        var tabla = $('#mitabla').DataTable({
+            "ajax": {
+                "url": '/Home/GetAll',
+                "tipe": "get",
+                "datatype": "json"
+            },
+            "columns": [
+                { "data": "IdPersona", "name": "IdPersona", "autoWidth": true },
+                { "data": "NombrePersona", "name": "NombrePersona", "autoWidth": true },
+                { "data": " EdadPersona", "name": " EdadPersona", "autoWidth": true },
+                { "data": "DescripcionPersona", "name": "DescripcionPersona ", "autoWidth": true }
+            ]
+        });
+    });
+    </script>
+}

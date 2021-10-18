@@ -1,8 +1,26 @@
-﻿@{
+﻿@model LABORATORIO_2.Models.ViewModel.PersonaViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+@using (Html.BeginForm("Save", "Home"))
+{
+
+    @Html.LabelFor(m => m.NombrePersona)
+    @Html.ValidationMessageFor(m => m.NombrePersona)
+    @Html.TextBoxFor(m => m.NombrePersona)
+
+
+    @Html.LabelFor(m => m.EdadPersona)
+    @Html.ValidationMessageFor(m => m.EdadPersona)
+    @Html.TextBoxFor(m => m.EdadPersona)
+
+
+    @Html.LabelFor(m => m.DescripcionPersona)
+    @Html.ValidationMessageFor(m => m.DescripcionPersona)
+    @Html.TextBoxFor(m => m.DescripcionPersona)
+
+    <input type="submit" class="btn btn-outline-primary" value="Save">
+
+}

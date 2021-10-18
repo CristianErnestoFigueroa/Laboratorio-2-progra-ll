@@ -1,4 +1,6 @@
 using LABORATORIO_2.Data;
+using LABORATORIO_2.Repository;
+using LABORATORIO_2.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,9 +29,9 @@ namespace LABORATORIO_2
         {
             services.AddControllersWithViews();
             services.AddDbContext<AplicationDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString
-            ("DefaultConnection")));
+            options.UseSqlServer(Configuration.GetConnectionString ("DefaultConnection")));
 
+            services.AddTransient<IAlmacen, PersonaRepositorio>();
 
         }
 

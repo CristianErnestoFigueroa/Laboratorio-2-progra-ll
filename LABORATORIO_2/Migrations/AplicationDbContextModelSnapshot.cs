@@ -31,7 +31,7 @@ namespace LABORATORIO_2.Migrations
                     b.Property<int>("EdadPersona")
                         .HasColumnType("int");
 
-                    b.Property<string>("NombePersona")
+                    b.Property<string>("NombrePersona")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdPersona");
