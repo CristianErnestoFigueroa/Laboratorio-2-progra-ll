@@ -14,13 +14,16 @@ namespace LABORATORIO_2.Dominio
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
         public int IdPersona { get; set; }
-
+        [Display(Name = "Nombre: ")]
+        [Required(ErrorMessage = "Este campo es requerido")]
         public string NombrePersona { get; set; }
-     
+        [Display(Name = "Edad: ")]
+        [Required(ErrorMessage = "Este campo es requerido")]
+        [Range(18, int.MaxValue, ErrorMessage = "No valido")]
         public int EdadPersona { get; set; }
-
+        [Display(Name = "Descripcion: ")]
+        [Required(ErrorMessage = "Este campo es requerido")]
         public string DescripcionPersona { get; set; }
 
-        
     }
 }

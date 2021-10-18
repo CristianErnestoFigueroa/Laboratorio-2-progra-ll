@@ -22,33 +22,50 @@ namespace LABORATORIO_2.Controllers
             this.ialmacen = ialmacen;
         }
 
-        public IActionResult Index()
+        public IActionResult index()
         {
             return View();
         }
-        public IActionResult Save(PersonaViewModel persona)
+
+        [HttpPost]
+        public IActionResult Index(AlmacenPersona per)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return View("Index", persona);
+                ialmacen.Save(per);
+                return View("Mostrar");
             }
             else
             {
-                AlmacenPersona p = new()
-                {
-                    NombrePersona = persona.NombrePersona,
-                    EdadPersona = persona.EdadPersona,
-                    DescripcionPersona = persona.DescripcionPersona
-                };
-                ialmacen.Save(p);
-
-                return View();
+                return View("Index", per);
             }
         }
+        //public IActionResult Save(AlmacenPersona persona)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View("Index", persona);
+        //    }
+        //    else
+        //    {
+        //        AlmacenPersona p = new()
+        //        {
+        //            NombrePersona = persona.NombrePersona,
+        //            EdadPersona = persona.EdadPersona,
+        //            DescripcionPersona = persona.DescripcionPersona
+        //        };
+        //        ialmacen.Save(p);
+
+        //        var json = ialmacen.Lista();
+        //        return View("Mostrar", Json(new { data = json }));
+        //    }
+        //}
         public IActionResult GetAll()
         {
-            var json = ialmacen.Lista();
-            return View("Mostrar", Json(new { data = json }));
+            var BuscandoTabla = ialmacen.Lista();
+
+            return Json(new { data = BuscandoTabla });
+
         }
         public IActionResult Mostrar()
         {
