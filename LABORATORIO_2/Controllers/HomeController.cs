@@ -62,9 +62,8 @@ namespace LABORATORIO_2.Controllers
         //}
         public IActionResult GetAll()
         {
-            var BuscandoTabla = ialmacen.Lista();
-
-            return Json(new { data = BuscandoTabla });
+            var json = ialmacen.Lista();
+            return View("Mostrar", Json(new { data = json }));
 
         }
         public IActionResult Mostrar()
